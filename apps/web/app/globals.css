@@ -1,0 +1,127 @@
+:root {
+  /* Horizontal spawn offset for asteroids (default preserved) */
+  --asteroid-left: 99vw;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body { height: 100%; }
+
+/* Space gradient base */
+.bg-space-gradient {
+  background: radial-gradient(1200px 800px at 20% 10%, rgba(66, 0, 104, 0.35), transparent 60%),
+              radial-gradient(1000px 700px at 80% 20%, rgba(0, 110, 255, 0.20), transparent 55%),
+              linear-gradient(180deg, #0b0b16 0%, #0a0a12 100%);
+}
+
+/* Neon palette */
+:root {
+  --neon-cyan: #00E5FF;
+  --neon-violet: #8A2BE2;
+  --neon-blue: #4F46E5;
+  --neon-pink: #FF3CAC;
+}
+
+a {
+  color: var(--neon-cyan);
+  transition: color 200ms ease;
+}
+a:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Premium parallax background */
+@keyframes scrollX {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.parallax-layer {
+  position: absolute;
+  inset: 0;
+  width: 200%;
+  overflow: visible;
+}
+.parallax-track {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: flex-start;
+  width: 200%;
+  animation: scrollX var(--dur) linear infinite;
+  will-change: transform;
+}
+.parallax-layer .item {
+  position: relative;
+  margin-left: 400px; /* spacing between parallax items */
+  filter: drop-shadow(0 0 8px rgba(0,229,255,0.15)) drop-shadow(0 0 12px rgba(138,43,226,0.12));
+}
+.scroll-slow { --dur: 120s; }
+.scroll-mid { --dur: 80s; }
+.scroll-fast { --dur: 50s; }
+
+/* Realistic float/spin animations for parallax images */
+@keyframes floatY {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+@keyframes floatYFast {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.parallax-img img { display: block; opacity: 0.96; }
+.spin-slow img { animation: spinSlow 120s linear infinite; transform-origin: 50% 50%; }
+.float-mid { animation: floatY 6s ease-in-out infinite; }
+.float-fast { animation: floatYFast 4.5s ease-in-out infinite; }
+
+/* Individually animated asteroids (controlled cadence) */
+@keyframes asteroidRun {
+  0%   { transform: translateX(0); opacity: 0; }  /* hidden during delay/backwards fill */
+  2%   { opacity: 1; }                             /* fade in right after start */
+  100% { transform: translateX(-145vw); opacity: 1; }
+}
+.asteroid-run {
+  position: absolute;
+  left: var(--asteroid-left); /* start off-screen to the right */
+  animation-name: asteroidRun;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  will-change: transform, opacity;
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .asteroid-run {
+    animation: none !important;
+    opacity: 0.6; /* keep subtle presence under veil */
+  }
+  .float-mid, .float-fast, .spin-slow img {
+    animation: none !important;
+  }
+}
+/* Comet hover effect */
+.comet-hover {
+  position: relative;
+  display: inline-block;
+}
+.comet-hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, rgba(0,229,255,0.35), transparent 60%);
+  transform: scale(0);
+  transition: transform 200ms ease;
+}
+.comet-hover:hover::before { transform: scale(1); }

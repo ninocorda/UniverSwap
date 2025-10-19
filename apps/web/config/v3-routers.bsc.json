@@ -1,0 +1,23 @@
+[
+  {
+    "name": "PancakeSwapV3Quoter",
+    "quoter": "0xb048BbC1EE6B733fFfCFb9E9ceF7375518e25997",
+    "testnetQuoter": null,
+    "sourceLink": "https://docs.pancakeswap.finance/",
+    "notes": "QuoterV2 on BSC mainnet. Ref: https://bscscan.com/address/0xb048bbc1ee6b733fffcfb9e9cef7375518e25997"
+  },
+  {
+    "name": "ThenaQuoter",
+    "quoter": "0xeA68020D6A9532EeC42D4dB0f92B83580c39b2cA",
+    "testnetQuoter": null,
+    "sourceLink": "https://docs.thena.fi/thena/official-links",
+    "notes": "Official docs -> List of smart contracts (Google Sheet). Quoter provided by user from official sheet."
+  },
+  {
+    "name": "ApeSwapV3Quoter",
+    "quoter": "",
+    "testnetQuoter": null,
+    "sourceLink": "https://apeswap.gitbook.io/apeswap-finance/",
+    "notes": "Optional; fill only if official V3 quoter exists and is verified"
+  }
+]

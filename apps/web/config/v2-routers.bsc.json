@@ -1,0 +1,58 @@
+[
+  {
+    "name": "PancakeSwapV2",
+    "address": "0x10ED43C718714eb63d5aA57B78B54704E256024E",
+    "testnetAddress": "0x9Ac64Cc6e4415144C455BD8E4837Fea55603e5c3",
+    "sourceLink": "https://docs.pancakeswap.finance/",
+    "notes": "Well-known Pancake V2 router (mainnet/testnet). Verify on BscScan before production."
+  },
+  {
+    "name": "ApeSwapV2",
+    "address": "0xcF0feBd3f17CEf5b47b0cD257aCf6025c5BFf3b7",
+    "testnetAddress": null,
+    "sourceLink": "https://web.archive.org/web/20240201/https://docs.ape.bond/apeswap-finance/where-dev/smart-contracts",
+    "notes": "Official ApeSwap docs (archived) BNB Chain DEX Contracts"
+  },
+  {
+    "name": "BiswapV2",
+    "address": "0x0eB6949e725A295Ecb3BEacFc3766610BC970BEF",
+    "testnetAddress": null,
+    "sourceLink": "https://docs.biswap.org/biswap/general-information/biswap-smart-contracts",
+    "notes": "Official Biswap Smart Contracts page: Smart Router contract"
+  },
+  {
+    "name": "Thena",
+    "address": "0xd4ae6eca985340dd434d38f470accce4dc78d109",
+    "testnetAddress": null,
+    "sourceLink": "https://docs.thena.fi/thena/official-links",
+    "notes": "Official docs -> List of smart contracts (Google Sheet). RouterV2 provided by user from official sheet."
+  },
+  {
+    "name": "BakerySwapV2",
+    "address": "",
+    "testnetAddress": null,
+    "sourceLink": "https://docs.bakeryswap.org/",
+    "notes": "Fill after verification"
+  },
+  {
+    "name": "MDEX",
+    "address": "",
+    "testnetAddress": null,
+    "sourceLink": "https://docs.mdex.co/",
+    "notes": "Fill after verification"
+  },
+  {
+    "name": "BabySwap",
+    "address": "0x325E343f1dE602396E256B67eFd1F61C3A6B38Bd",
+    "testnetAddress": null,
+    "sourceLink": "https://docs.babyswap.finance/developers/smart-contracts",
+    "notes": "Official BabySwap docs: Main contracts -> Router"
+  },
+  {
+    "name": "JulSwap",
+    "address": "0xBd67d157502A23309Db761c41965600c2Ec788b2",
+    "testnetAddress": null,
+    "sourceLink": "https://github.com/JustLiquidity/julswap-contract",
+    "notes": "Official JulSwap GitHub: Deployed Contracts lists BSCswapRouter"
+  }
+]

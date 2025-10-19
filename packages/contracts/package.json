@@ -1,0 +1,34 @@
+{
+  "name": "@universwap/contracts",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "hardhat typechain",
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "test:tiers": "hardhat test test/tokenFactory.tiers.spec.ts",
+    "clean": "hardhat clean"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@typechain/ethers-v6": "^0.5.1",
+    "@typechain/hardhat": "^9.1.0",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^22.5.4",
+    "dotenv": "^17.2.2",
+    "ethers": "^6.13.2",
+    "hardhat": "^2.22.10",
+    "ts-node": "^10.9.2",
+    "typechain": "^8.3.2",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.4.0",
+    "@openzeppelin/contracts-upgradeable": "^5.4.0",
+    "@sushiswap/masterchef": "github:sushiswap/masterchef",
+    "@uniswap/v3-core": "^1.0.1",
+    "@uniswap/v3-periphery": "^1.4.4",
+    "bentobox": "github:sushiswap/bentobox",
+    "kashi-lending": "github:sushiswap/kashi-lending"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://universwap.app/token-factory/fees.schema.json",
+  "description": "Example fee configuration. Remove or update comments before uploading.",
+  "fees": [
+    {
+      "feeType": 0,
+      "bps": 100,
+      "recipient": "0x0000000000000000000000000000000000000000",
+      "$comment": "Platform fee (1%) routed to treasury."
+    },
+    {
+      "feeType": 1,
+      "bps": 50,
+      "recipient": "0x0000000000000000000000000000000000000000",
+      "$comment": "Referral fee (0.5%) routed to partner wallet."
+    }
+  ]
+}

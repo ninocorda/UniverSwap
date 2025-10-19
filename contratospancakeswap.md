@@ -1,0 +1,74 @@
+PancakeSwap Contracts
+V3 Contracts
+
+NonfungiblePositionManager
+
+Mainnet (56): 0x46A15B0b27311cedF172AB29E4f4766fbE7F4364
+
+Testnet (97): 0x427bF5b37357632377eCbEC9de3626C71A5396c1
+
+PancakeInterfaceMulticall
+
+Mainnet (56): 0xac1cE734566f390A94b00eb9bf561c2625BF44ea
+
+Testnet (97): 0x3D00CdB4785F0ef20C903A13596e0b9B2c652227
+
+PancakeV3Factory
+
+Mainnet (56): 0x0BFbCF9fa4f9C56B0F40a671Ad40E0805A091865
+
+Testnet (97): —
+
+PancakeV3PoolDeployer
+
+Mainnet (56): 0x41ff9AA7e16B8B1a8a8dc4f0eFacd93D02d071c9
+
+Testnet (97): —
+
+QuoterV2
+
+Mainnet (56): 0xB048Bbc1Ee6b733FFfCFb9e9CeF7375518e25997
+
+Testnet (97): 0xbC203d7f83677c7ed3F7acEc959963E7F4ECC5C2
+
+SwapRouter (V3)
+
+Mainnet (56): 0x1b81D678ffb9C0263b24A97847620C99d213eB14
+
+Testnet (97): 0x1b81D678ffb9C0263b24A97847620C99d213eB14
+
+TickLens
+
+Mainnet (56): 0x9a489505a00cE272eAa5e07Dba6491314CaE3796
+
+Testnet (97): 0xac1cE734566f390A94b00eb9bf561c2625BF44ea
+
+V3Migrator
+
+Mainnet (56): 0xbC203d7f83677c7ed3F7acEc959963E7F4ECC5C2
+
+Testnet (97): 0x46A15B0b27311cedF172AB29E4f4766fbE7F4364
+
+V2 Contracts
+
+Factory
+
+Mainnet (56): 0xcA143Ce32Fe78f1f7019d7d551a6402fC5350c73
+
+Testnet (97): 0x6725F303b657a9451d8BA641348b6761A6CC7a17
+
+Router
+
+Mainnet (56): 0x10ED43C718714eb63d5aA57B78B54704E256024E
+
+Testnet (97): 0xD99D1c33F9fC3444f8101754aBC46c52416550D1
+
+### Aprobaciones AggregatorRouter (BSC Testnet)
+
+- Router: `0xbe6A77f9F4b43473AEFdF57e6F60aD39495783A6`
+- Tokens aprobados (1000 * 10^18 cada uno):
+  - `USDC` – `0x64544969ed7ebf5f083679233325356ebe738930`
+  - `USDT` – `0x221c5b1a293aac1187ed3a7d7d2d9ad7fe1f3fb0`
+  - `BUSD` – `0xed24fc36d5ee211ea25a80239fb8c4cfd80f12ee`
+  - `CAKE` – `0x7ef95a0fee0dd31b22626fa2e10ee6a223f8a684`
+  - `WBNB` – `0xae13d989dac2f0debff460ac112a837c89baa7cd`

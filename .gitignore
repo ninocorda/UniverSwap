@@ -1,0 +1,74 @@
+# Logs
+logs
+*.log
+*.log.*
+pnpm-debug.log*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Node modules
+node_modules/
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.tmp
+*.temp
+
+# Operating system
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+.env.*
+!.env.example
+!.env*.example
+*.local
+!.env.local.example
+
+# TypeScript
+*.tsbuildinfo
+
+# Next.js / frontend builds
+.next/
+out/
+dist/
+build/
+.turbo/
+.vercel/
+
+# App builds (per workspace)
+apps/**/.next/
+apps/**/out/
+apps/**/dist/
+apps/**/build/
+apps/**/.turbo/
+apps/**/coverage/
+apps/**/*.tsbuildinfo
+
+# Packages builds (libraries, contracts)
+packages/**/dist/
+packages/**/build/
+packages/**/coverage/
+packages/**/.turbo/
+packages/**/*.tsbuildinfo
+
+# Hardhat / smart contract artifacts
+artifacts/
+cache/
+typechain/
+typechain-types/
+broadcast/
+deployments/
+
+# Coverage
+coverage/
+.nyc_output/
+
+# Temporary
+tmp/
+temp/

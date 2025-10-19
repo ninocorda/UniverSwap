@@ -1,0 +1,28 @@
+export const IDOPoolABI = [
+  // Views
+  { inputs: [], name: 'saleToken', outputs: [{ type: 'address' }], stateMutability: 'view', type: 'function' },
+  { inputs: [], name: 'raiseToken', outputs: [{ type: 'address' }], stateMutability: 'view', type: 'function' },
+  { inputs: [], name: 'fundsRecipient', outputs: [{ type: 'address' }], stateMutability: 'view', type: 'function' },
+  { inputs: [], name: 'startTime', outputs: [{ type: 'uint256' }], stateMutability: 'view', type: 'function' },
+  { inputs: [], name: 'endTime', outputs: [{ type: 'uint256' }], stateMutability: 'view', type: 'function' },
+  { inputs: [], name: 'softCap', outputs: [{ type: 'uint256' }], stateMutability: 'view', type: 'function' },
+  { inputs: [], name: 'hardCap', outputs: [{ type: 'uint256' }], stateMutability: 'view', type: 'function' },
+  { inputs: [], name: 'minContribution', outputs: [{ type: 'uint256' }], stateMutability: 'view', type: 'function' },
+  { inputs: [], name: 'maxContribution', outputs: [{ type: 'uint256' }], stateMutability: 'view', type: 'function' },
+  { inputs: [], name: 'tokensPerUnit', outputs: [{ type: 'uint256' }], stateMutability: 'view', type: 'function' },
+  { inputs: [], name: 'totalRaised', outputs: [{ type: 'uint256' }], stateMutability: 'view', type: 'function' },
+  { inputs: [], name: 'whitelistEnabled', outputs: [{ type: 'bool' }], stateMutability: 'view', type: 'function' },
+  { inputs: [], name: 'status', outputs: [{ type: 'uint8' }], stateMutability: 'view', type: 'function' },
+  { inputs: [], name: 'owner', outputs: [{ type: 'address' }], stateMutability: 'view', type: 'function' },
+  { inputs: [{ name: 'user', type: 'address' }], name: 'contributions', outputs: [{ type: 'uint256' }], stateMutability: 'view', type: 'function' },
+  { inputs: [{ name: 'user', type: 'address' }], name: 'claimed', outputs: [{ type: 'bool' }], stateMutability: 'view', type: 'function' },
+  { inputs: [{ name: 'raiseAmount', type: 'uint256' }], name: 'previewSaleAmount', outputs: [{ type: 'uint256' }], stateMutability: 'view', type: 'function' },
+  // Actions
+  { inputs: [{ name: 'amount', type: 'uint256' }], name: 'contribute', outputs: [], stateMutability: 'payable', type: 'function' },
+  { inputs: [], name: 'finalize', outputs: [], stateMutability: 'nonpayable', type: 'function' },
+  { inputs: [], name: 'claim', outputs: [], stateMutability: 'nonpayable', type: 'function' },
+  { inputs: [], name: 'refund', outputs: [], stateMutability: 'nonpayable', type: 'function' },
+  { inputs: [{ name: 'user', type: 'address' }, { name: 'allowed', type: 'bool' }], name: 'setWhitelist', outputs: [], stateMutability: 'nonpayable', type: 'function' },
+  { inputs: [{ name: 'users', type: 'address[]' }, { name: 'allowed', type: 'bool' }], name: 'setWhitelistBatch', outputs: [], stateMutability: 'nonpayable', type: 'function' },
+  { inputs: [{ name: 'amount', type: 'uint256' }], name: 'depositSaleTokens', outputs: [], stateMutability: 'nonpayable', type: 'function' },
+] as const;

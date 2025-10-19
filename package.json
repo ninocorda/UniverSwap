@@ -1,0 +1,26 @@
+{
+  "name": "universwap",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "packageManager": "pnpm@9.12.0",
+  "scripts": {
+    "build": "pnpm -C apps/web build && pnpm -C packages/contracts build",
+    "dev": "pnpm -C apps/web dev",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@openzeppelin/contracts": "^5.4.0",
+    "@typescript-eslint/eslint-plugin": "^7.16.1",
+    "@typescript-eslint/parser": "^7.16.1",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^14.2.5",
+    "hardhat": "^2.22.10",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.4"
+  }
+}
