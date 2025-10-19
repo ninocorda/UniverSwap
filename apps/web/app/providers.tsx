@@ -4,15 +4,7 @@ import '@rainbow-me/rainbowkit/styles.css';
 import { RainbowKitProvider, getDefaultConfig } from '@rainbow-me/rainbowkit';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { WagmiProvider } from 'wagmi';
-import {
-  mainnet,
-  polygon,
-  arbitrum,
-  bsc,
-  goerli,
-  arbitrumGoerli,
-  bscTestnet,
-} from 'viem/chains';
+import { bscTestnet } from 'viem/chains';
 import { ReactNode, useEffect, useState } from 'react';
 import { ToastProvider } from '../components/ui/Toast';
 import { LanguageProvider } from '../lib/i18n/LanguageContext';
@@ -32,7 +24,7 @@ export default function Providers({ children }: { children: ReactNode }) {
         const cfg = getDefaultConfig({
           appName: 'Universwap',
           projectId: walletConnectProjectId,
-          chains: [mainnet, polygon, arbitrum, bsc, goerli, arbitrumGoerli, bscTestnet],
+          chains: [bscTestnet],
           ssr: true,
         });
         setConfig(cfg);
