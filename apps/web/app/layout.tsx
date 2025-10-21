@@ -5,6 +5,7 @@ import { clsx } from 'clsx';
 import Header from '../components/Header';
 import { Space_Grotesk } from 'next/font/google';
 import dynamic from 'next/dynamic';
+import { Analytics } from '@vercel/analytics/react';
 const Providers = dynamic(() => import('./providers'), { ssr: false });
 import StarfieldCanvas from '../components/ui/StarfieldCanvas';
 import Footer from '../components/Footer';
@@ -78,6 +79,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Providers>
           <div className="flex min-h-screen flex-col">
             <GoogleAnalytics />
+            <Analytics />
             <Header />
             <div className="flex-1">{children}</div>
             <Footer />
