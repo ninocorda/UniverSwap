@@ -92,24 +92,25 @@ export default function Header() {
           aria-label="Toggle navigation"
           aria-expanded={isMenuOpen}
           onClick={() => setIsMenuOpen((prev) => !prev)}
-          className="relative z-50 flex h-11 w-11 flex-col items-center justify-center gap-1.5 rounded border border-white/10 bg-black/30 text-neutral-light transition hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 lg:hidden"
+          className="relative z-50 flex h-11 w-11 items-center justify-center rounded border border-white/10 bg-black/30 text-neutral-light transition hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 lg:hidden"
         >
+          <span className="sr-only">{isMenuOpen ? 'Close menu' : 'Open menu'}</span>
           <span
             className={clsx(
-              'block h-0.5 w-5 bg-current transition-transform duration-200 ease-in-out',
-              isMenuOpen ? 'translate-y-1.5 rotate-45' : '-translate-y-1.5'
+              'absolute left-1/2 block h-[2px] w-6 -translate-x-1/2 rounded-full bg-current transition-transform duration-200 ease-in-out',
+              isMenuOpen ? 'top-1/2 -translate-y-1/2 rotate-45' : 'top-1/2 -translate-y-[9px]'
             )}
           />
           <span
             className={clsx(
-              'block h-0.5 w-5 bg-current transition-opacity duration-200 ease-in-out',
+              'absolute left-1/2 top-1/2 block h-[2px] w-6 -translate-x-1/2 rounded-full bg-current transition-opacity duration-150 ease-in-out',
               isMenuOpen ? 'opacity-0' : 'opacity-100'
             )}
           />
           <span
             className={clsx(
-              'block h-0.5 w-5 bg-current transition-transform duration-200 ease-in-out',
-              isMenuOpen ? '-translate-y-1.5 -rotate-45' : 'translate-y-1.5'
+              'absolute left-1/2 block h-[2px] w-6 -translate-x-1/2 rounded-full bg-current transition-transform duration-200 ease-in-out',
+              isMenuOpen ? 'top-1/2 -translate-y-1/2 -rotate-45' : 'top-1/2 translate-y-[9px]'
             )}
           />
         </button>
