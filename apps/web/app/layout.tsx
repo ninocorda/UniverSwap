@@ -9,6 +9,7 @@ const Providers = dynamic(() => import('./providers'), { ssr: false });
 import StarfieldCanvas from '../components/ui/StarfieldCanvas';
 import Footer from '../components/Footer';
 const SpaceParallax = dynamic(() => import('../components/ui/SpaceParallax'), { ssr: false });
+const GoogleAnalytics = dynamic(() => import('../components/analytics/GoogleAnalytics'), { ssr: false });
 
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-sans' });
 
@@ -76,6 +77,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <StarfieldCanvas />
         <Providers>
           <div className="flex min-h-screen flex-col">
+            <GoogleAnalytics />
             <Header />
             <div className="flex-1">{children}</div>
             <Footer />
